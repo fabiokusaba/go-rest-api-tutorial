@@ -27,7 +27,7 @@ func main() {
 		log.Fatalln("db connection failed:", err)
 	}
 	// start api server
-	apiServer := api.NewAPIServer(":8080")
+	apiServer := api.NewAPIServer(":8080", dbConn)
 	if err := apiServer.Run(); err != nil {
 		log.Fatalln("error running api server")
 	}
