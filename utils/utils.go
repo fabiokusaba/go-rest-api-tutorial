@@ -8,7 +8,7 @@ import (
 	"github.com/go-playground/validator/v10"
 )
 
-var validate = validator.New()
+var Validate = validator.New()
 
 func ParseJSON(r *http.Request, value any) error {
 	if r.Body == nil {
